@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on My Geoscience Learning Website</title>
+    <link>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/</link>
+    <description>Recent content in Categories on My Geoscience Learning Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>2024, Li Jiahao.</copyright>
+    <lastBuildDate>Sun, 01 Dec 2024 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://geoscience-lijh.github.io/Geoscience-Lijh/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/introduction/</link>
+      <pubDate>Sun, 01 Dec 2024 08:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/introduction/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programme</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/programme/</link>
+      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/programme/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
