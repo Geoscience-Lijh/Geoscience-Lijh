@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programme on My Geoscience Learning Website</title>
+    <link>http://localhost:1313/categories/programme/</link>
+    <description>Recent content in Programme on My Geoscience Learning Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>2024, Li Jiahao.</copyright>
+    <lastBuildDate>Sat, 30 Nov 2024 22:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/programme/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown Language</title>
+      <link>http://localhost:1313/programme/markdown/</link>
+      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/programme/markdown/</guid>
+      <description>&lt;h1 id=&#34;markdown&#34;&gt;Markdown&lt;/h1&gt;&#xA;&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;John Gruber in 2004&lt;/a&gt;, Markdown is now one of the world’s most popular markup languages.&lt;/p&gt;&#xA;&lt;p&gt;All the content on my website is written in Markdown, so here&amp;rsquo;s a brief introduction to its basic usage. Of course, you can also find more details on the official website.&lt;/p&gt;&#xA;&lt;h2 id=&#34;heading&#34;&gt;Heading&lt;/h2&gt;&#xA;&lt;p&gt;Use a different number of &amp;ldquo;#&amp;rdquo; to adjust the level of the heading.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My friend, wishing you all the best!</title>
+      <link>http://localhost:1313/introduction/dxp/</link>
+      <pubDate>Fri, 01 Nov 2024 06:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/introduction/dxp/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

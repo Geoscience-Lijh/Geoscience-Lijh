@@ -1,0 +1,94 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My Geoscience Learning Website</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My Geoscience Learning Website</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>2024, Li Jiahao.</copyright>
+    <lastBuildDate>Sun, 01 Dec 2024 08:00:00 +0800</lastBuildDate>
+    
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>My friend, wishing you all the best!</title>
+        <link>http://localhost:1313/introduction/dxp/</link>
+        <pubDate>Sun, 01 Dec 2024 08:00:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/introduction/dxp/</guid>
+        <description>My Geoscience Learning Website http://localhost:1313/introduction/dxp/ -- http://localhost:1313/introduction/dxp/ - 2024, Li Jiahao.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Markdown Language</title>
+        <link>http://localhost:1313/programme/markdown/</link>
+        <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/programme/markdown/</guid>
+        <description>My Geoscience Learning Website http://localhost:1313/programme/markdown/ -&lt;h1 id=&#34;markdown&#34;&gt;Markdown&lt;/h1&gt;
+&lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;John Gruber in 2004&lt;/a&gt;, Markdown is now one of the world’s most popular markup languages.&lt;/p&gt;
+&lt;p&gt;All the content on my website is written in Markdown, so here&amp;rsquo;s a brief introduction to its basic usage. Of course, you can also find more details on the official website.&lt;/p&gt;
+&lt;h2 id=&#34;heading&#34;&gt;Heading&lt;/h2&gt;
+&lt;p&gt;Use a different number of &amp;ldquo;#&amp;rdquo; to adjust the level of the heading.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# Level 1 Heading
+## Level 2 Heading
+#### Level 4 Heading  
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;separating&#34;&gt;Separating&lt;/h2&gt;
+&lt;p&gt;Use three or more &amp;ldquo;-&amp;rdquo; , &amp;ldquo;*&amp;rdquo; or &amp;ldquo;_&amp;rdquo; to separate paragraphs.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;---
+***
+___
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;lists&#34;&gt;Lists&lt;/h2&gt;
+&lt;p&gt;Use &amp;ldquo;*&amp;rdquo; , &amp;ldquo;+&amp;rdquo; or &amp;ldquo;-&amp;rdquo; to create unordered lists.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;* Item one
++ Item two
+- Item three
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Use number and point to create ordered lists.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. First item
+2. Second item
+3. third item
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;code-blocks&#34;&gt;Code Blocks&lt;/h2&gt;
+&lt;p&gt;Use three ` at the beginning and end to create a code block.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;This is a code block.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;mathematical-formulas&#34;&gt;Mathematical Formulas&lt;/h2&gt;
+&lt;p&gt;Use $$ at the beginning and end to create a formula.&lt;/p&gt;
+&lt;p&gt;$$
+E = mc^2
+$$&lt;/p&gt;
+&lt;h2 id=&#34;blockquotes&#34;&gt;Blockquotes&lt;/h2&gt;
+&lt;p&gt;use &amp;gt; to delimit block quotes&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;gt; This is a blockquotes.
+&amp;gt;
+&amp;gt;&amp;gt; This is nested block quote
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;links&#34;&gt;LINKS&lt;/h2&gt;
+&lt;p&gt;Use [ ] and ( ) to link various website, such as &lt;a href=&#34;https://www.nature.com/&#34;&gt;nature&lt;/a&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[nature](https://www.nature.com/)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You also can use reference links. This method allows you to manage links in a unified way.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;[nature][id]
+
+[id]: https://www.nature.com/
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;images&#34;&gt;Images&lt;/h2&gt;
+&lt;p&gt;Markdown is very simple and flexible, allowing you to combine different commands according to your personal preferences and needs.&lt;/p&gt;
+- http://localhost:1313/programme/markdown/ - 2024, Li Jiahao.</description>
+        </item>
+    
+    
+    
+        <item>
+        <title>Welcome to My Webpage!</title>
+        <link>http://localhost:1313/introduction/test/</link>
+        <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
+        
+        <guid>http://localhost:1313/introduction/test/</guid>
+        <description>My Geoscience Learning Website http://localhost:1313/introduction/test/ -&lt;p&gt;This is a test text.&lt;/p&gt;
+- http://localhost:1313/introduction/test/ - 2024, Li Jiahao.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 
