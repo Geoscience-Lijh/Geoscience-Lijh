@@ -1,7 +1,7 @@
 ---
 date: 2024-11-30T22:00:00+08:00
 description: Markdown guide
-featured_image: "/images/Markdown.png"
+featured_image: "images/Markdown.png"
 tags: [markdown,language]
 title: "Markdown Language"
 categories: programme
@@ -76,7 +76,7 @@ Use [ ] and ( ) to link various website, such as [nature](https://www.nature.com
 ```
 [nature](https://www.nature.com/)
 ```
-You also can use reference links.This method allows you to manage links in a unified way.
+You also can use reference links. This method allows you to manage links in a unified way.
 ```
 [nature][id]
 
