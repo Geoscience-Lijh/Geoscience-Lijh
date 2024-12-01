@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on My Geoscience Learning Website</title>
+    <link>http://Geoscience-Lijh.github.io/tags/</link>
+    <description>Recent content in Tags on My Geoscience Learning Website</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>2024, Li Jiahao.</copyright>
+    <lastBuildDate>Sat, 30 Nov 2024 22:00:00 +0800</lastBuildDate>
+    <atom:link href="http://Geoscience-Lijh.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Language</title>
+      <link>http://Geoscience-Lijh.github.io/tags/language/</link>
+      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
+      <guid>http://Geoscience-Lijh.github.io/tags/language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://Geoscience-Lijh.github.io/tags/markdown/</link>
+      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
+      <guid>http://Geoscience-Lijh.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Test</title>
+      <link>http://Geoscience-Lijh.github.io/tags/test/</link>
+      <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
+      <guid>http://Geoscience-Lijh.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Text</title>
+      <link>http://Geoscience-Lijh.github.io/tags/text/</link>
+      <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
+      <guid>http://Geoscience-Lijh.github.io/tags/text/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
