@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/Geoscience-Lijh/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Geoscience-Lijh/livereload" data-no-instant defer></script>
+<title>FWI and Specfem2D</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="G-XXXXXXXXXX">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Full waveform inversion">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:url" content="http://localhost:1313/Geoscience-Lijh/workshop/fwi/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="FWI and Specfem2D">
+  <meta property="og:description" content="Full waveform inversion">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="workshop">
+    <meta property="article:published_time" content="2024-12-21T15:00:00+08:00">
+    <meta property="article:modified_time" content="2024-12-21T15:00:00+08:00">
+    <meta property="article:tag" content="FWI">
+    <meta property="article:tag" content="Specfem2D">
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="FWI and Specfem2D">
+  <meta name="twitter:description" content="Full waveform inversion">
+
+
+
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script>
+
+
+
+
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "abcdefghzd");
+</script>
+
+
+
+  
+
+
+
+
+
+
+      <script src="/Geoscience-Lijh/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/Geoscience-Lijh/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/Geoscience-Lijh/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/Geoscience-Lijh/vendor/js/md5.min.js"></script><script>
+  var gitalk = new Gitalk({
+  clientID: 'Ov23li3dRCbMuCFdJ4ln',
+  clientSecret: '59bfe3091cb20b3b25044d282bc7cc81d7d0111d',
+  repo: 'Geoscience-Lijh',
+  owner: 'Geoscience-Lijh',
+  admin: ['Geoscience-Lijh'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<head>
+        
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/introduction/">
+                    Introduction
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/programme/">
+                    Programming
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/math/">
+                    Mathematics
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geology/">
+                    Geology
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geophysics/">
+                    Geophysics
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/references/">
+                    References
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/Geoscience-Lijh/workshop/">
+                    Workshop
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/unfiled/">
+                    Unfiled
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bd%9c%e4%b8%9a" class="nav-作业">
+									作业
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a8%8b%e5%ba%8f%e8%bf%90%e8%a1%8c" class="nav-程序运行">
+									程序运行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bc%96%e8%af%91" class="nav-编译">
+									编译
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bf%ae%e6%94%b9%e6%a8%a1%e5%9e%8b" class="nav-修改模型">
+									修改模型
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a3%8b%e7%9b%98%e6%a0%bc%e6%b5%8b%e8%af%95%e4%b8%8e%e6%ad%a3%e6%bc%94" class="nav-棋盘格测试与正演">
+									棋盘格测试与正演
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%94%b6%e8%8e%b7" class="nav-收获">
+									收获
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%83%a8%e5%88%86%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95" class="nav-部分问题解决办法">
+									部分问题解决办法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="http://localhost:1313/Geoscience-Lijh/">
+            My Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="http://localhost:1313/Geoscience-Lijh/">
+        <div class="single-column-header-title">My Blog</div>
+        
+
+    </a>
+</div>
+
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+
+            <div class="post-head-wrapper-text-only"
+                
+            >
+                <div class="post-title">
+                    FWI and Specfem2D
+                    
+                    <div class="post-subtitle">
+                        Full waveform inversion
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2024-12-21 15:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/fwi">FWI</a>
+                                &nbsp;
+                            
+                                <a href="/tags/specfem2d">Specfem2D</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="作业"><strong>作业</strong></h2>
+<pre tabindex="0"><code>1. 完成编译
+2. 修改模型的大小为宽度 -90~90 km，高度为 90 km 
+3. 完成棋盘格模型生成正演
+</code></pre><h2 id="程序运行"><strong>程序运行</strong></h2>
+<h4 id="编译"><strong>编译</strong></h4>
+<p>依次运行下列代码完成编译，最后在bin文件夹下生成需要的xspecfem2D_no_adj_snap_save和xspecfem2D_no_adj_snap_save_modify_bielak_condition_newest_bottom_absorb文件。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#228b22"># specfem2D-master下编译 </span>
+</span></span><span style="display:flex;"><span>make clean
+</span></span><span style="display:flex;"><span>./configure <span style="color:#00688b">FC</span>=gfortran --without-mpi
+</span></span><span style="display:flex;"><span>make
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># 配置环境</span>
+</span></span><span style="display:flex;"><span><span style="color:#658b00">export</span> <span style="color:#00688b">PATH</span>=/home/lijh/specfem2D-master/bin:<span style="color:#00688b">$PATH</span> &gt;&gt; ~/.bashrc
+</span></span><span style="display:flex;"><span><span style="color:#658b00">source</span> ~/.bashrc
+</span></span><span style="display:flex;"><span><span style="color:#658b00">echo</span> <span style="color:#00688b">$PATH</span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># 正演编译</span>
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> src/specfem2D
+</span></span><span style="display:flex;"><span>cp compute_Bielak_conditions_add_bottom_function_with_gaussian_STF.f90 compute_Bielak_conditions.f90
+</span></span><span style="display:flex;"><span>cp compute_stacey_elastic_new_modified_bottom_absorb.f90 compute_stacey_elastic.f90
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> ../..
+</span></span><span style="display:flex;"><span>make spec
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> bin
+</span></span><span style="display:flex;"><span>cp xspecfem2D xspecfem2D_no_adj_snap_save_modify_bielak_condition_newest_bottom_absorb
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> ..
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># 反演编译</span>
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> src/specfem2D
+</span></span><span style="display:flex;"><span>cp compute_Bielak_conditions_original.f90 compute_Bielak_conditions.f90
+</span></span><span style="display:flex;"><span>cp compute_stacey_elastic_original.f90 compute_stacey_elastic.f90
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> ../..
+</span></span><span style="display:flex;"><span>make spec
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> bin
+</span></span><span style="display:flex;"><span>cp xspecfem2D xspecfem2D_no_adj_snap_save
+</span></span><span style="display:flex;"><span><span style="color:#658b00">cd</span> ..
+</span></span></code></pre></div><p><img src="/Geoscience-Lijh/images/FWI/makefile.png" alt="makefile" title="图1: bin文件夹下的文件"></p>
+<h4 id="修改模型"><strong>修改模型</strong></h4>
+<p>长度和宽度的修改在parafile文件里进行，该文件主要的参数修改如下：</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#00688b">MODEL</span> =default
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># first receiver set (repeat these 6 lines and adjust nreceiversets accordingly)</span>
+</span></span><span style="display:flex;"><span><span style="color:#00688b">nrec</span> = <span style="color:#b452cd">121</span>             
+</span></span><span style="display:flex;"><span><span style="color:#00688b">xdeb</span> = -60000.      
+</span></span><span style="display:flex;"><span><span style="color:#00688b">zdeb</span> = 90000.       
+</span></span><span style="display:flex;"><span><span style="color:#00688b">xfin</span> = 60000.        
+</span></span><span style="display:flex;"><span><span style="color:#00688b">zfin</span> = 90000.         
+</span></span><span style="display:flex;"><span><span style="color:#00688b">record_at_surface_same_vertical</span> = .true.        
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># file containing interfaces for internal mesh</span>
+</span></span><span style="display:flex;"><span><span style="color:#00688b">interfacesfile</span> = ../interfaces_simple_topo_sphere_90km.dat
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># geometry of the model (origin lower-left corner = 0,0) and mesh description</span>
+</span></span><span style="display:flex;"><span><span style="color:#00688b">xmin</span> = -90000.d0          
+</span></span><span style="display:flex;"><span><span style="color:#00688b">xmax</span> = 90000.d0      
+</span></span><span style="display:flex;"><span><span style="color:#00688b">nx</span>   = <span style="color:#b452cd">90</span>            
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># define the different regions of the model in the (nx,nz) spectral-element mesh</span>
+</span></span><span style="display:flex;"><span><span style="color:#00688b">nbregions</span> = <span style="color:#b452cd">3</span>    
+</span></span><span style="display:flex;"><span><span style="color:#b452cd">1</span> <span style="color:#b452cd">90</span>  <span style="color:#b452cd">1</span>  <span style="color:#b452cd">15</span> <span style="color:#b452cd">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#b452cd">1</span> <span style="color:#b452cd">90</span>  <span style="color:#b452cd">16</span> <span style="color:#b452cd">30</span> <span style="color:#b452cd">7</span>
+</span></span><span style="display:flex;"><span><span style="color:#b452cd">1</span> <span style="color:#b452cd">90</span>  <span style="color:#b452cd">31</span> <span style="color:#b452cd">45</span> <span style="color:#b452cd">8</span>           
+</span></span></code></pre></div><p>高度的修改在interfaces文件里进行，修改如下，修改完成后重命名为interfaces_simple_topo_sphere_90km.dat，与Par_file里的命名对应。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#228b22"># number of interfaces</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">2</span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># interface number 1 (bottom of the mesh)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">2</span>
+</span></span><span style="display:flex;"><span> -90000 <span style="color:#b452cd">0</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">90000</span> <span style="color:#b452cd">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># interface number 2</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">2</span>
+</span></span><span style="display:flex;"><span> -90000 <span style="color:#b452cd">90000</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">90000</span> <span style="color:#b452cd">90000</span>
+</span></span><span style="display:flex;"><span><span style="color:#228b22"># layer number 1 (bottom layer)</span>
+</span></span><span style="display:flex;"><span> <span style="color:#b452cd">45</span>
+</span></span></code></pre></div><h4 id="棋盘格测试与正演"><strong>棋盘格测试与正演</strong></h4>
+<p>运行脚本生成一个三层的水平层状速度模型以及相应的波场快照，其中震源位于左下角,绿色部分为台站，模型颜色越深的部分速度越高。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>bash run_this_example_only_forward_test_incidence_angle.sh
+</span></span></code></pre></div><p><img src="/Geoscience-Lijh/images/FWI/snap.png" alt="snap" title="图2: 500s-2000s的波场快照"></p>
+<p>修改assign_initial_velm_model_for_spherical_topo_region.m文件里的文件路径，修改checkerboard_anomalies_generation.m里的棋盘格模型范围和格子大小如下，运行matlab脚本得到AK135模型和棋盘格测试模型。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-matlab" data-lang="matlab"><span style="display:flex;"><span>len_z=<span style="color:#b452cd">7.5</span>
+</span></span><span style="display:flex;"><span>num_z=<span style="color:#b452cd">5</span>
+</span></span><span style="display:flex;"><span>len_x = <span style="color:#b452cd">7.5</span>
+</span></span><span style="display:flex;"><span>num_x = <span style="color:#b452cd">10</span>
+</span></span></code></pre></div><p><img src="/Geoscience-Lijh/images/FWI/AK135.jpg" alt="AK135" title="图3: AK135模型"></p>
+<p><img src="/Geoscience-Lijh/images/FWI/checkboard.jpg" alt="checkboard" title="图4: 棋盘格测试模型"></p>
+<p>修改脚本如下使得用棋盘格模型进行正演，得到棋盘格测试结果。</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>cp Dingjie2_model_velocity.dat_new_defined_1D_layered_with_topo_two_layer_checkerboard_smooth_ak135_-90_to_90_ele_90_45_checkerboard proc000000_model_velocity.dat_input
+</span></span></code></pre></div><hr>
+<h2 id="收获"><strong>收获</strong></h2>
+<p>伴随波场反传的意义在于，它将“数据误差”的信息传递回模型中，帮助我们找到哪些区域的模型参数需要调整。通过正向波场和伴随波场的相关，我们能知道如何修改模型以减少误差，从而实现反演目标。
+正向波场：从震源开始正向传播，模拟地震波的传播过程。
+伴随波场：从接收点出发，利用误差作为震源，反向传播波场。
+梯度计算：通过正向波场和伴随波场的相关，得到目标函数对模型参数的敏感性。</p>
+<h2 id="部分问题解决办法"><strong>部分问题解决办法</strong></h2>
+<p>cp compute_Bielak_conditions_add_bottom_function_with_gaussian_STF.f90 compute_Bielak_conditions.f90编译报错</p>
+<pre tabindex="0"><code>解决：把compute_Bielak_conditions_add_bottom_function_with_gaussian_STF_old.f90文件的old去掉再编译。
+</code></pre><p>bash run_this_example_only_forward_test_incidence_angle.sh报错</p>
+<pre tabindex="0"><code>解决：docker拉取ubuntu22.04或者更新libc6。
+</code></pre>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2024-12-21</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts">
+			Next<br>No newer posts.
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/Geoscience-Lijh/workshop/swit/">
+			Previous<br>SWIT
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="http://localhost:1313/Geoscience-Lijh/">
+    
+        <div class="nav-title">
+            My Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/introduction/">
+                Introduction
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/programme/">
+                Programming
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/math/">
+                Mathematics
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geology/">
+                Geology
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geophysics/">
+                Geophysics
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/references/">
+                References
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/Geoscience-Lijh/workshop/">
+                Workshop
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/unfiled/">
+                Unfiled
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024, Jiahao Li.
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e4%bd%9c%e4%b8%9a" class="nav-作业">
+									作业
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e7%a8%8b%e5%ba%8f%e8%bf%90%e8%a1%8c" class="nav-程序运行">
+									程序运行
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#%e7%bc%96%e8%af%91" class="nav-编译">
+									编译
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e4%bf%ae%e6%94%b9%e6%a8%a1%e5%9e%8b" class="nav-修改模型">
+									修改模型
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e6%a3%8b%e7%9b%98%e6%a0%bc%e6%b5%8b%e8%af%95%e4%b8%8e%e6%ad%a3%e6%bc%94" class="nav-棋盘格测试与正演">
+									棋盘格测试与正演
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+							
+								</ul>
+							
+								</ul>
+							
+						
+						
+						
+							<li>
+								<a href="#%e6%94%b6%e8%8e%b7" class="nav-收获">
+									收获
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#%e9%83%a8%e5%88%86%e9%97%ae%e9%a2%98%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95" class="nav-部分问题解决办法">
+									部分问题解决办法
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024, Jiahao Li.
+	
+</div>
+        </div>
+
+        
+        
+
+        
+        <script type="text/javascript" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script><script src="/Geoscience-Lijh/js/journal.js"></script></body>
+</html>

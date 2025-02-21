@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on My Blog</title>
+    <link>http://localhost:1313/Geoscience-Lijh/tags/test/</link>
+    <description>Recent content in Test on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>2024, Jiahao Li.</copyright>
+    <lastBuildDate>Sat, 30 Nov 2024 06:00:00 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/Geoscience-Lijh/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to My Blog!</title>
+      <link>http://localhost:1313/Geoscience-Lijh/introduction/test/</link>
+      <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
+      <guid>http://localhost:1313/Geoscience-Lijh/introduction/test/</guid>
+      <description>&lt;p&gt;This is a test text.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
