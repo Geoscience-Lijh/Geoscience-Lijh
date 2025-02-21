@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-<title>Welcome to My Webpage!</title>
+<html lang="en"><head>
+<title>Welcome to My Blog!</title>
 
 
 
@@ -16,9 +16,9 @@
 
 
 
-<meta property="og:url" content="http://localhost:1313/introduction/test/">
-  <meta property="og:site_name" content="My Geoscience Learning Website">
-  <meta property="og:title" content="Welcome to My Webpage!">
+<meta property="og:url" content="https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Welcome to My Blog!">
   <meta property="og:description" content="introduction test">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
@@ -34,7 +34,7 @@
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Welcome to My Webpage!">
+  <meta name="twitter:title" content="Welcome to My Blog!">
   <meta name="twitter:description" content="introduction test">
 
 
@@ -78,11 +78,11 @@
 
 
 
-      <script src="/js/toc.js"></script>
+      <script src="/Geoscience-Lijh/js/toc.js"></script>
     
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/Geoscience-Lijh/vendor/css/bootstrap.min.css">
 
-<link rel="stylesheet" href="/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+<link rel="stylesheet" href="/Geoscience-Lijh/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
 
 
 <link rel="stylesheet"
@@ -94,6 +94,23 @@
 
 
 
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/Geoscience-Lijh/vendor/js/md5.min.js"></script><script>
+  var gitalk = new Gitalk({
+  clientID: 'Ov23li3dRCbMuCFdJ4ln',
+  clientSecret: '39d39e2d1313a017ed31059c70bf1c6eb6d5248f',
+  repo: 'Geoscience-Lijh',
+  owner: 'Geoscience-Lijh',
+  admin: ['Geoscience-Lijh'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
 
 
 
@@ -107,8 +124,19 @@
 
 
 </head>
-<body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
+<head>
+        
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"><div class="single-column-drawer-container" id="drawer"
      v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
     <div class="drawer-content">
         <div class="drawer-menu">
@@ -122,7 +150,7 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item active" href="/introduction/">
+                <a class="a-block drawer-menu-item active" href="/Geoscience-Lijh/introduction/">
                     Introduction
                 </a>
                 
@@ -132,8 +160,8 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/programme">
-                    Programme
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/programme/">
+                    Programming
                 </a>
                 
             
@@ -142,7 +170,7 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/math/">
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/math/">
                     Mathematics
                 </a>
                 
@@ -152,7 +180,7 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/geology/">
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geology/">
                     Geology
                 </a>
                 
@@ -162,7 +190,7 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/geophysics/">
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geophysics/">
                     Geophysics
                 </a>
                 
@@ -172,7 +200,7 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/references/">
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/references/">
                     References
                 </a>
                 
@@ -182,7 +210,17 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/tags">
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/workshop/">
+                    Workshop
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/tags">
                     Tags
                 </a>
                 
@@ -192,8 +230,8 @@
                 
                 
                 
-                <a class="a-block drawer-menu-item false" href="/archive/">
-                    Archive
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/unfiled/">
+                    Unfiled
                 </a>
                 
             
@@ -217,8 +255,8 @@
                 menu
             </i>
         </button>
-        <a id="navTitle" class="navbar-brand" href="http://localhost:1313/">
-            My Geoscience Learning Website
+        <a id="navTitle" class="navbar-brand" href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
+            My Blog
         </a>
         
         <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
@@ -231,14 +269,13 @@
 </nav>
 <div class="single-column-header-container" id="pageHead"
      v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="http://localhost:1313/">
-        <div class="single-column-header-title">My Geoscience Learning Website</div>
-        
-        <div class="single-column-header-subtitle">Li Jiahao | lijh575@mail2.sysu.edu.cn</div>
+    <a href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
+        <div class="single-column-header-title">My Blog</div>
         
 
     </a>
 </div>
+
 
             <div id="content">
                 <div id="streamContainer" class="stream-container">
@@ -255,12 +292,12 @@
                 
                     
                     
-                    style="background-image: url('http://localhost:1313/images/test.jpg')"
+                    style="background-image: url('https://geoscience-lijh.github.io/Geoscience-Lijh/images/test.jpg')"
                     
                 
             >
                 <div class="post-title">
-                    Welcome to My Webpage!
+                    Welcome to My Blog!
                     
                     <div class="post-subtitle">
                         introduction test
@@ -273,10 +310,6 @@
                         </time>
                         
 
-                        
-                            <i class="material-icons" style="">folder</i>
-                                <a href="/categories/introduction">Introduction</a>
-                                &nbsp;
                         
 
                         
@@ -311,7 +344,7 @@
             <nav class="post-pagination">
 
                 
-                <a class="newer-posts" href="/programme/markdown/">
+                <a class="newer-posts" href="/Geoscience-Lijh/programme/markdown/">
 			Next<br>Markdown Language
                 </a>
                 
@@ -325,6 +358,8 @@
             <div class="post-comment-wrapper">
                 
 
+
+<div id="gitalk-container"></div>
 
 
 
@@ -341,17 +376,13 @@
     </div>
 
 
-                    </div>
+                </div>
             </div><div id="sideContainer" class="side-container">
     
-    <a class="a-block nav-head false" href="http://localhost:1313/">
+    <a class="a-block nav-head false" href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
     
         <div class="nav-title">
-            My Geoscience Learning Website
-        </div>
-        
-        <div class="nav-subtitle">
-            Li Jiahao | lijh575@mail2.sysu.edu.cn
+            My Blog
         </div>
         
     </a>
@@ -366,7 +397,7 @@
             
             
             
-            <a class="a-block nav-link-item active" href="/introduction/">
+            <a class="a-block nav-link-item active" href="/Geoscience-Lijh/introduction/">
                 Introduction
             </a>
             
@@ -376,8 +407,8 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/programme">
-                Programme
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/programme/">
+                Programming
             </a>
             
         
@@ -386,7 +417,7 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/math/">
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/math/">
                 Mathematics
             </a>
             
@@ -396,7 +427,7 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/geology/">
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geology/">
                 Geology
             </a>
             
@@ -406,7 +437,7 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/geophysics/">
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geophysics/">
                 Geophysics
             </a>
             
@@ -416,7 +447,7 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/references/">
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/references/">
                 References
             </a>
             
@@ -426,7 +457,17 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/tags">
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/workshop/">
+                Workshop
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/tags">
                 Tags
             </a>
             
@@ -436,8 +477,8 @@
             
             
             
-            <a class="a-block nav-link-item false" href="/archive/">
-                Archive
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/unfiled/">
+                Unfiled
             </a>
             
         
@@ -454,7 +495,7 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2024, Li Jiahao.
+	2024, Jiahao Li.
 	
 
     </div>
@@ -496,10 +537,16 @@ Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopene
 
 &copy;
 	
-	2024, Li Jiahao.
+	2024, Jiahao Li.
 	
 </div>
-            </div>
-    
-    <script src="/js/journal.js"></script></body>
+        </div>
+
+        
+        
+
+        
+        <script type="text/javascript" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script><script src="/Geoscience-Lijh/js/journal.js"></script></body>
 </html>

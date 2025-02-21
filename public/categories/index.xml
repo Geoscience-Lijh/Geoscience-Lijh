@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on My Geoscience Learning Website</title>
-    <link>http://localhost:1313/categories/</link>
-    <description>Recent content in Categories on My Geoscience Learning Website</description>
+    <title>Categories on My Blog</title>
+    <link>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/</link>
+    <description>Recent content in Categories on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>2024, Li Jiahao.</copyright>
-    <lastBuildDate>Sat, 30 Nov 2024 22:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2024, Jiahao Li.</copyright>
+    <lastBuildDate>Mon, 02 Dec 2024 08:00:00 +0800</lastBuildDate>
+    <atom:link href="https://geoscience-lijh.github.io/Geoscience-Lijh/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Programme</title>
-      <link>http://localhost:1313/categories/programme/</link>
-      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/categories/programme/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Introduction</title>
-      <link>http://localhost:1313/categories/introduction/</link>
-      <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/categories/introduction/</guid>
+      <title>References</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/references/</link>
+      <pubDate>Mon, 02 Dec 2024 08:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/categories/references/</guid>
       <description></description>
     </item>
   </channel>

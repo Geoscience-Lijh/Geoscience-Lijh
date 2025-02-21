@@ -1,40 +1,68 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on My Geoscience Learning Website</title>
-    <link>http://localhost:1313/tags/</link>
-    <description>Recent content in Tags on My Geoscience Learning Website</description>
+    <title>Tags on My Blog</title>
+    <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/</link>
+    <description>Recent content in Tags on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>2024, Li Jiahao.</copyright>
-    <lastBuildDate>Sat, 30 Nov 2024 22:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2024, Jiahao Li.</copyright>
+    <lastBuildDate>Sat, 21 Dec 2024 15:00:00 +0800</lastBuildDate>
+    <atom:link href="https://geoscience-lijh.github.io/Geoscience-Lijh/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FWI</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/fwi/</link>
+      <pubDate>Sat, 21 Dec 2024 15:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/fwi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Specfem2D</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/specfem2d/</link>
+      <pubDate>Sat, 21 Dec 2024 15:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/specfem2d/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SWIT</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/swit/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/swit/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Language</title>
-      <link>http://localhost:1313/tags/language/</link>
-      <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/language/</guid>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/language/</link>
+      <pubDate>Tue, 10 Dec 2024 22:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/language/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/linux/</link>
+      <pubDate>Tue, 10 Dec 2024 22:00:00 +0800</pubDate>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>Markdown</title>
-      <link>http://localhost:1313/tags/markdown/</link>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/markdown/</link>
       <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/markdown/</guid>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/markdown/</guid>
       <description></description>
     </item>
     <item>
       <title>Test</title>
-      <link>http://localhost:1313/tags/test/</link>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/test/</link>
       <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/test/</guid>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/test/</guid>
       <description></description>
     </item>
     <item>
       <title>Text</title>
-      <link>http://localhost:1313/tags/text/</link>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/text/</link>
       <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/text/</guid>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/tags/text/</guid>
       <description></description>
     </item>
   </channel>

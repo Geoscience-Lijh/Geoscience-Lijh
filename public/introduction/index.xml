@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introductions on My Geoscience Learning Website</title>
-    <link>http://localhost:1313/introduction/</link>
-    <description>Recent content in Introductions on My Geoscience Learning Website</description>
+    <title>Introductions on My Blog</title>
+    <link>https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/</link>
+    <description>Recent content in Introductions on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <copyright>2024, Li Jiahao.</copyright>
+    <copyright>2024, Jiahao Li.</copyright>
     <lastBuildDate>Sat, 30 Nov 2024 06:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/introduction/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Welcome to My Webpage!</title>
-      <link>http://localhost:1313/introduction/test/</link>
+      <title>Welcome to My Blog!</title>
+      <link>https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/</link>
       <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/introduction/test/</guid>
+      <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/</guid>
       <description>&lt;p&gt;This is a test text.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>My friend, wishing you all the best!</title>
-      <link>http://localhost:1313/introduction/dxp/</link>
-      <pubDate>Fri, 01 Nov 2024 06:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/introduction/dxp/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

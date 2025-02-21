@@ -1,19 +1,20 @@
 ---
 date: 2024-11-30T22:00:00+08:00
+lastmod: 2024-12-02T12:00:00+08:00
 description: Markdown guide
-featured_image: "/images/Markdown.png"
+featured_image: "images/Markdown.png"
 tags: [markdown,language]
 title: "Markdown Language"
-categories: programme
+categories:
 ---
 
-# Markdown   
+## **Introduction**
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by [John Gruber in 2004][markdown], Markdown is now one of the world’s most popular markup languages.
 
-All the content on my website is written in Markdown, so here's a brief introduction to its basic usage. Of course, you can also find more details on the official website.
+All the content on my website is written in Markdown by [ghostwtriter][ghost], so here's a brief introduction to its basic usage. Of course, you can also find more details on the official website.
 
-## Heading
+## **Heading**
 
 Use a different number of "#" to adjust the level of the heading.
 ```
@@ -22,7 +23,7 @@ Use a different number of "#" to adjust the level of the heading.
 #### Level 4 Heading  
 ```
  
-## Separating
+## **Separating**
 
 Use three or more "-" , "*" or "_" to separate paragraphs.
 ```
@@ -32,7 +33,7 @@ ___
 
 ```
 
-## Lists
+## **Lists**
 
 Use "*" , "+" or "-" to create unordered lists.
 ```
@@ -47,14 +48,14 @@ Use number and point to create ordered lists.
 3. third item
 ```
 
-## Code Blocks
+## **Code Blocks**
 
 Use three ` at the beginning and end to create a code block.
 ```
 This is a code block.
 ```
 
-## Mathematical Formulas
+## **Mathematical Formulas**
 Use $$ at the beginning and end to create a formula.
 
 $$
@@ -62,7 +63,7 @@ E = mc^2
 $$
 
 
-## Blockquotes
+## **Blockquotes**
 
 use > to delimit block quotes
 ```
@@ -71,7 +72,7 @@ use > to delimit block quotes
 >> This is nested block quote
 ```
 
-## LINKS
+## **LINKS**
 Use [ ] and ( ) to link various website, such as [nature](https://www.nature.com/).
 ```
 [nature](https://www.nature.com/)
@@ -82,11 +83,31 @@ You also can use reference links. This method allows you to manage links in a un
 
 [id]: https://www.nature.com/
 ```
-## Images
+## **Images**
+Use !, [] and ()can embed images.
+```
+![notebook](/images/notebook.jpg "an example image")
+```
+![notebook](/Geoscience-Lijh/images/notebook.jpg "an example image")
+
+Or
+```
+![Hugo](https://gohugo.io/img/hugo-logo.png?w=200)
+```
+
+![Hugo logo](https://gohugo.io/img/hugo-logo.png?w=200)
+
+You can also use the same syntax as with reference links.
+```
+![Hugo logo][Hugo] for a reference defined below.
+
+[Hugo]: https://gohugo.io/img/hugo-logo.png?w=200
+```
 
 
-Markdown is very simple and flexible, allowing you to combine different commands according to your personal preferences and needs.
+
 
 
 [markdown]: https://daringfireball.net/projects/markdown/
+[ghost]: https://kde.github.io/ghostwriter/documentation.html
 [nat]: https://www.nature.com/

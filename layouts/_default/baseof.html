@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    {{- partial "head.html" . -}}
+
+    <head>
+        <!-- Add custom styles for centering images -->
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app">
+            {{- partial "mobile-header.html" . -}}
+            <!-- mobile header -->
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+                    {{- block "main" . }}{{- end }}
+                </div>
+            </div>
+
+            {{- partial "sidebar.html" . -}}
+            {{- partial "extrabar.html" . -}}
+
+            {{- partial "mobile-footer.html" . -}}
+            <!-- mobile footer -->
+        </div>
+
+        {{ partial "journal.html" .}}
+        <!-- For compatibility. View https://github.com/AmazingRise/hugo-theme-diary/pull/135 for details.-->
+
+        <!-- Load MathJax for math formula rendering -->
+        <script type="text/javascript" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+
+        {{- $hugoVersion := split (replaceRE ".*([0-9]+)\\.([0-9]+)\\.([0-9]+).*" "$1 $2 $3" hugo.Version) " " -}}
+        {{- if and (eq (int (index $hugoVersion 0)) 0) (ge (int (index $hugoVersion 1)) 101) -}}
+            <script src="{{"js/journal.js" | relURL}}"></script>
+        {{- else -}}
+            <script src="{{"/js/journal.js" | relURL}}"></script>
+        {{- end -}}
+    </body>
+</html>

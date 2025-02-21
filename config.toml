@@ -1,8 +1,8 @@
-baseURL = "http://GeoscienceLijh.github.io/"
+baseURL = "https://geoscience-lijh.github.io/Geoscience-Lijh/"
 DefaultContentLanguage = "en" # Theme's display language, supports: en, fr, zh, zh-hant
 languageCode = "en-us"
-title = "My Geoscience Learning Website"
-copyright = "2024, Li Jiahao."
+title = "My Blog"
+copyright = "2024, Jiahao Li."
 theme = "diary"
 
 #Google Analytics
@@ -23,9 +23,13 @@ theme = "diary"
     tabWidth = 4
 
 [params]
-subtitle = "Li Jiahao | lijh575@mail2.sysu.edu.cn"
-enableGitalk = false
+subtitle = ""
+enableGitalk = true
 enableGiscus = false
+useLastMod = true
+
+[params.math]
+  katex = true
 
 # Microsoft Clarity (https://clarity.microsoft.com/) is a free user behavior recording and analytics tool
 clarity = "abcdefghzd"
@@ -37,10 +41,10 @@ title = "My Blog" # will set 'og:site_name'
 description = "My HomePage Description"  # will set 'og:description'
 
 [params.gitalk]
-  owner = "user"
-  repo = "repo name"
-  client_id = "your client id"
-  client_secret = "your client secret"
+  owner = "Geoscience-Lijh"
+  repo = "Geoscience-Lijh"
+  client_id = "Ov23li3dRCbMuCFdJ4ln"
+  client_secret = "59bfe3091cb20b3b25044d282bc7cc81d7d0111d"
 [taxonomies]
    tag = "tags"
    category = "categories"
@@ -74,8 +78,8 @@ weight = 1
 
 
 [[menu.main]]
-url = "/programme"
-name = "Programme"
+url = "/programme/"
+name = "Programming"
 weight = 3
 
 [[menu.main]]
@@ -99,11 +103,17 @@ name = "References"
 weight = 7
 
 [[menu.main]]
-url = "/tags"
-name = "Tags"
+url = "/workshop/"
+name = "Workshop"
 weight = 8
 
 [[menu.main]]
-url = "/archive/"
-name = "Archive"
+url = "/tags"
+name = "Tags"
+weight = 9
+
+[[menu.main]]
+url = "/unfiled/"
+name = "Unfiled"
 weight = 10
+
