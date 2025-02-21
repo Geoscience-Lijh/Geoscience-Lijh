@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<title>Markdown Language</title>
+
+
+
+
+<meta charset="utf-8">
+<meta name="X-UA-Compatible" content="IE=edge">
+<meta name="google-site-verification" content="G-XXXXXXXXXX">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta name="description" content="Markdown guide">
+<meta name="renderer" content="webkit">
+<meta name="theme-color" content="#ffffff">
+
+
+
+<meta property="og:url" content="https://geoscience-lijh.github.io/Geoscience-Lijh/programme/markdown/">
+  <meta property="og:site_name" content="My Blog">
+  <meta property="og:title" content="Markdown Language">
+  <meta property="og:description" content="Markdown guide">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="programme">
+    <meta property="article:published_time" content="2024-11-30T22:00:00+08:00">
+    <meta property="article:modified_time" content="2024-12-02T12:00:00+08:00">
+    <meta property="article:tag" content="Markdown">
+    <meta property="article:tag" content="Language">
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Markdown Language">
+  <meta name="twitter:description" content="Markdown guide">
+
+
+
+
+
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }
+      </script>
+
+
+
+
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "abcdefghzd");
+</script>
+
+
+
+  
+
+
+
+
+
+
+      <script src="/Geoscience-Lijh/js/toc.js"></script>
+    
+    <link type="text/css" rel="stylesheet" href="/Geoscience-Lijh/vendor/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="/Geoscience-Lijh/scss/dark-mode.min.cb53f1bee2b8900cb4f082afbf00175d6618f281cf9a2fe8619e3b52d20b5721.css" integrity="sha256-y1PxvuK4kAy08IKvvwAXXWYY8oHPmi/oYZ47UtILVyE=" media="screen">
+
+
+<link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Material+Icons">
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="/Geoscience-Lijh/vendor/js/md5.min.js"></script><script>
+  var gitalk = new Gitalk({
+  clientID: 'Ov23li3dRCbMuCFdJ4ln',
+  clientSecret: '39d39e2d1313a017ed31059c70bf1c6eb6d5248f',
+  repo: 'Geoscience-Lijh',
+  owner: 'Geoscience-Lijh',
+  admin: ['Geoscience-Lijh'],
+  id: md5(location.pathname),
+  distractionFreeMode: 'false'
+  });
+  window.onload = function () {
+        gitalk.render('gitalk-container')
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<head>
+        
+        <style>
+            img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"><div class="single-column-drawer-container" id="drawer"
+     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+    <div class="drawer-content">
+        <div class="drawer-menu">
+            
+            
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/introduction/">
+                    Introduction
+                </a>
+                
+            
+                
+                
+                
+                    
+                
+                
+                
+                <a class="a-block drawer-menu-item active" href="/Geoscience-Lijh/programme/">
+                    Programming
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/math/">
+                    Mathematics
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geology/">
+                    Geology
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/geophysics/">
+                    Geophysics
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/references/">
+                    References
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/workshop/">
+                    Workshop
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/tags">
+                    Tags
+                </a>
+                
+            
+                
+                
+                
+                
+                
+                <a class="a-block drawer-menu-item false" href="/Geoscience-Lijh/unfiled/">
+                    Unfiled
+                </a>
+                
+            
+            
+            <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#introduction" class="nav-introduction">
+									Introduction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading" class="nav-heading">
+									Heading
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#separating" class="nav-separating">
+									Separating
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#lists" class="nav-lists">
+									Lists
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#code-blocks" class="nav-code-blocks">
+									Code Blocks
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mathematical-formulas" class="nav-mathematical-formulas">
+									Mathematical Formulas
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#blockquotes" class="nav-blockquotes">
+									Blockquotes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#links" class="nav-links">
+									LINKS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#images" class="nav-images">
+									Images
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+            
+        </div>
+    </div>
+</div>
+<transition name="fade">
+    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
+</transition>
+<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
+    <div id="navBackground" class="nav-background"></div>
+    <div class="container container-narrow nav-content">
+        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
+            <i class="material-icons">
+                menu
+            </i>
+        </button>
+        <a id="navTitle" class="navbar-brand" href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
+            My Blog
+        </a>
+        
+        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
+            <i class="material-icons" id="darkModeToggleIcon2">
+                dark_mode
+            </i>
+        </button>
+        
+    </div>
+</nav>
+<div class="single-column-header-container" id="pageHead"
+     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+    <a href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
+        <div class="single-column-header-title">My Blog</div>
+        
+
+    </a>
+</div>
+
+
+            <div id="content">
+                <div id="streamContainer" class="stream-container">
+
+    <div class="post-list-container post-list-container-shadow">
+        <div class="post">
+            
+            
+            
+                
+            
+
+            <div class="post-head-wrapper"
+                
+                    
+                    
+                    style="background-image: url('https://geoscience-lijh.github.io/Geoscience-Lijh/images/Markdown.png')"
+                    
+                
+            >
+                <div class="post-title">
+                    Markdown Language
+                    
+                    <div class="post-subtitle">
+                        Markdown guide
+                    </div>
+                    
+                    <div class="post-meta">
+                        
+                        <time itemprop="datePublished">
+                            2024-11-30 22:00
+                        </time>
+                        
+
+                        
+
+                        
+                            <i class="material-icons" style="">label</i>
+                            
+                                <a href="/tags/markdown">markdown</a>
+                                &nbsp;
+                            
+                                <a href="/tags/language">language</a>
+                                &nbsp;
+                            
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="post-body-wrapper">
+                
+                <div class="post-body" v-pre>
+                
+                    <h2 id="introduction"><strong>Introduction</strong></h2>
+<p>Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by <a href="https://daringfireball.net/projects/markdown/">John Gruber in 2004</a>, Markdown is now one of the world’s most popular markup languages.</p>
+<p>All the content on my website is written in Markdown by <a href="https://kde.github.io/ghostwriter/documentation.html">ghostwtriter</a>, so here&rsquo;s a brief introduction to its basic usage. Of course, you can also find more details on the official website.</p>
+<h2 id="heading"><strong>Heading</strong></h2>
+<p>Use a different number of &ldquo;#&rdquo; to adjust the level of the heading.</p>
+<pre tabindex="0"><code># Level 1 Heading
+## Level 2 Heading
+#### Level 4 Heading  
+</code></pre><h2 id="separating"><strong>Separating</strong></h2>
+<p>Use three or more &ldquo;-&rdquo; , &ldquo;*&rdquo; or &ldquo;_&rdquo; to separate paragraphs.</p>
+<pre tabindex="0"><code>---
+***
+___
+</code></pre><h2 id="lists"><strong>Lists</strong></h2>
+<p>Use &ldquo;*&rdquo; , &ldquo;+&rdquo; or &ldquo;-&rdquo; to create unordered lists.</p>
+<pre tabindex="0"><code>* Item one
++ Item two
+- Item three
+</code></pre><p>Use number and point to create ordered lists.</p>
+<pre tabindex="0"><code>1. First item
+2. Second item
+3. third item
+</code></pre><h2 id="code-blocks"><strong>Code Blocks</strong></h2>
+<p>Use three ` at the beginning and end to create a code block.</p>
+<pre tabindex="0"><code>This is a code block.
+</code></pre><h2 id="mathematical-formulas"><strong>Mathematical Formulas</strong></h2>
+<p>Use $$ at the beginning and end to create a formula.</p>
+<p>$$
+E = mc^2
+$$</p>
+<h2 id="blockquotes"><strong>Blockquotes</strong></h2>
+<p>use &gt; to delimit block quotes</p>
+<pre tabindex="0"><code>&gt; This is a blockquotes.
+&gt;
+&gt;&gt; This is nested block quote
+</code></pre><h2 id="links"><strong>LINKS</strong></h2>
+<p>Use [ ] and ( ) to link various website, such as <a href="https://www.nature.com/">nature</a>.</p>
+<pre tabindex="0"><code>[nature](https://www.nature.com/)
+</code></pre><p>You also can use reference links. This method allows you to manage links in a unified way.</p>
+<pre tabindex="0"><code>[nature][id]
+
+[id]: https://www.nature.com/
+</code></pre><h2 id="images"><strong>Images</strong></h2>
+<p>Use !, [] and ()can embed images.</p>
+<pre tabindex="0"><code>![notebook](/images/notebook.jpg &#34;an example image&#34;)
+</code></pre><p><img src="/Geoscience-Lijh/images/notebook.jpg" alt="notebook" title="an example image"></p>
+<p>Or</p>
+<pre tabindex="0"><code>![Hugo](https://gohugo.io/img/hugo-logo.png?w=200)
+</code></pre><p><img src="https://gohugo.io/img/hugo-logo.png?w=200" alt="Hugo logo"></p>
+<p>You can also use the same syntax as with reference links.</p>
+<pre tabindex="0"><code>![Hugo logo][Hugo] for a reference defined below.
+
+[Hugo]: https://gohugo.io/img/hugo-logo.png?w=200
+</code></pre>
+                    
+                    <HR width="100%" id="EOF">
+		    <p style="color:#777;">Last modified on 2024-12-02</p>
+                    
+                </div>
+            </div>
+            
+            
+            <nav class="post-pagination">
+
+                
+                <a class="newer-posts" href="/Geoscience-Lijh/references/ref_summary/">
+			Next<br>Summary of References
+                </a>
+                
+                
+                
+                <a class="older-posts" href="/Geoscience-Lijh/introduction/test/">
+			Previous<br>Welcome to My Blog!
+                </a>
+                
+            </nav>
+            <div class="post-comment-wrapper">
+                
+
+
+<div id="gitalk-container"></div>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+                </div>
+            </div><div id="sideContainer" class="side-container">
+    
+    <a class="a-block nav-head false" href="https://geoscience-lijh.github.io/Geoscience-Lijh/">
+    
+        <div class="nav-title">
+            My Blog
+        </div>
+        
+    </a>
+
+    <div class="nav-link-list">
+        
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/introduction/">
+                Introduction
+            </a>
+            
+        
+            
+            
+            
+                
+            
+            
+            
+            <a class="a-block nav-link-item active" href="/Geoscience-Lijh/programme/">
+                Programming
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/math/">
+                Mathematics
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geology/">
+                Geology
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/geophysics/">
+                Geophysics
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/references/">
+                References
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/workshop/">
+                Workshop
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/tags">
+                Tags
+            </a>
+            
+        
+            
+            
+            
+            
+            
+            <a class="a-block nav-link-item false" href="/Geoscience-Lijh/unfiled/">
+                Unfiled
+            </a>
+            
+        
+    </div>
+
+    
+
+    <div class="nav-footer">
+        
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024, Jiahao Li.
+	
+
+    </div>
+    
+</div><div id="extraContainer" class="extra-container">
+    <div class="toc-wrapper">
+        
+
+        
+        <div class="toc">
+
+
+	<div class="toc-content">
+	
+		
+		
+		
+		<center>- CATALOG -</center>
+		
+		
+		<ul>
+			
+				
+				
+					
+						
+						
+						
+						
+							
+								
+									<ul>
+								
+							
+						
+						
+							<li>
+								<a href="#introduction" class="nav-introduction">
+									Introduction
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#heading" class="nav-heading">
+									Heading
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#separating" class="nav-separating">
+									Separating
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#lists" class="nav-lists">
+									Lists
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#code-blocks" class="nav-code-blocks">
+									Code Blocks
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#mathematical-formulas" class="nav-mathematical-formulas">
+									Mathematical Formulas
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#blockquotes" class="nav-blockquotes">
+									Blockquotes
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#links" class="nav-links">
+									LINKS
+								</a>
+							</li>
+						
+						
+					
+				
+			
+				
+				
+					
+						
+						
+						
+						
+						
+							<li>
+								<a href="#images" class="nav-images">
+									Images
+								</a>
+							</li>
+						
+						
+					
+				
+			
+		</ul>
+	</div>
+
+</div>
+        
+    </div>
+    <div class="pagination">
+        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
+            :class="{ invisible: scrollY == 0 }">
+            <i class="material-icons pagination-action-icon">
+                keyboard_arrow_up
+            </i>
+        </a>
+        
+        <a type="button" class="pagination-action" id="darkModeToggleButton">
+            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
+                dark_mode
+            </span>
+        </a>
+        
+        
+    </div>
+</div>
+
+<div id="single-column-footer">
+Hugo Theme <a href="https://github.com/amazingrise/hugo-theme-diary">Diary</a> by <a href="https://risehere.net/">Rise</a>
+<br>
+Ported from <a href="https://mak1t0.cc/" target="_blank" rel="noreferrer noopener">Makito</a>'s <a href="https://github.com/SumiMakito/hexo-theme-journal/" target="_blank" rel="noreferrer noopener">Journal.</a> <br>
+<br>
+
+&copy;
+	
+	2024, Jiahao Li.
+	
+</div>
+        </div>
+
+        
+        
+
+        
+        <script type="text/javascript" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script><script src="/Geoscience-Lijh/js/journal.js"></script></body>
+</html>
