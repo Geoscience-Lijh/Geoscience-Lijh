@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>My Blog</title>
-    <link>https://geoscience-lijh.github.io/Geoscience-Lijh/</link>
+    <link>http://localhost:1313/Geoscience-Lijh/</link>
     <description>Recent content on My Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>2024, Jiahao Li.</copyright>
     <lastBuildDate>Mon, 01 Jan 2035 00:00:00 +0800</lastBuildDate>
     
-        <atom:link href="https://geoscience-lijh.github.io/Geoscience-Lijh/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/Geoscience-Lijh/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
         <title>FWI and Specfem2D</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/fwi/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/workshop/fwi/</link>
         <pubDate>Sat, 21 Dec 2024 15:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/fwi/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/fwi/ -&lt;h2 id=&#34;作业&#34;&gt;&lt;strong&gt;作业&lt;/strong&gt;&lt;/h2&gt;
+        <guid>http://localhost:1313/Geoscience-Lijh/workshop/fwi/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/workshop/fwi/ -&lt;h2 id=&#34;作业&#34;&gt;&lt;strong&gt;作业&lt;/strong&gt;&lt;/h2&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;1. 完成编译
 2. 修改模型的大小为宽度 -90~90 km，高度为 90 km 
 3. 完成棋盘格模型生成正演
@@ -52,7 +52,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; bin
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp xspecfem2D xspecfem2D_no_adj_snap_save
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; ..
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://geoscience-lijh.github.io/Geoscience-Lijh/Geoscience-Lijh/images/FWI/makefile.png&#34; alt=&#34;makefile&#34; title=&#34;图1: bin文件夹下的文件&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Geoscience-Lijh/Geoscience-Lijh/images/FWI/makefile.png&#34; alt=&#34;makefile&#34; title=&#34;图1: bin文件夹下的文件&#34;&gt;&lt;/p&gt;
 &lt;h4 id=&#34;修改模型&#34;&gt;&lt;strong&gt;修改模型&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;长度和宽度的修改在parafile文件里进行，该文件主要的参数修改如下：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#00688b&#34;&gt;MODEL&lt;/span&gt; =default
@@ -94,14 +94,14 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;棋盘格测试与正演&#34;&gt;&lt;strong&gt;棋盘格测试与正演&lt;/strong&gt;&lt;/h4&gt;
 &lt;p&gt;运行脚本生成一个三层的水平层状速度模型以及相应的波场快照，其中震源位于左下角,绿色部分为台站，模型颜色越深的部分速度越高。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bash run_this_example_only_forward_test_incidence_angle.sh
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://geoscience-lijh.github.io/Geoscience-Lijh/Geoscience-Lijh/images/FWI/snap.png&#34; alt=&#34;snap&#34; title=&#34;图2: 500s-2000s的波场快照&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Geoscience-Lijh/Geoscience-Lijh/images/FWI/snap.png&#34; alt=&#34;snap&#34; title=&#34;图2: 500s-2000s的波场快照&#34;&gt;&lt;/p&gt;
 &lt;p&gt;修改assign_initial_velm_model_for_spherical_topo_region.m文件里的文件路径，修改checkerboard_anomalies_generation.m里的棋盘格模型范围和格子大小如下，运行matlab脚本得到AK135模型和棋盘格测试模型。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-matlab&#34; data-lang=&#34;matlab&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;len_z=&lt;span style=&#34;color:#b452cd&#34;&gt;7.5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;num_z=&lt;span style=&#34;color:#b452cd&#34;&gt;5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;len_x = &lt;span style=&#34;color:#b452cd&#34;&gt;7.5&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;num_x = &lt;span style=&#34;color:#b452cd&#34;&gt;10&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://geoscience-lijh.github.io/Geoscience-Lijh/Geoscience-Lijh/images/FWI/AK135.jpg&#34; alt=&#34;AK135&#34; title=&#34;图3: AK135模型&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://geoscience-lijh.github.io/Geoscience-Lijh/Geoscience-Lijh/images/FWI/checkboard.jpg&#34; alt=&#34;checkboard&#34; title=&#34;图4: 棋盘格测试模型&#34;&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Geoscience-Lijh/Geoscience-Lijh/images/FWI/AK135.jpg&#34; alt=&#34;AK135&#34; title=&#34;图3: AK135模型&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Geoscience-Lijh/Geoscience-Lijh/images/FWI/checkboard.jpg&#34; alt=&#34;checkboard&#34; title=&#34;图4: 棋盘格测试模型&#34;&gt;&lt;/p&gt;
 &lt;p&gt;修改脚本如下使得用棋盘格模型进行正演，得到棋盘格测试结果。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cp Dingjie2_model_velocity.dat_new_defined_1D_layered_with_topo_two_layer_checkerboard_smooth_ak135_-90_to_90_ele_90_45_checkerboard proc000000_model_velocity.dat_input
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
@@ -115,18 +115,18 @@
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;解决：把compute_Bielak_conditions_add_bottom_function_with_gaussian_STF_old.f90文件的old去掉再编译。
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;bash run_this_example_only_forward_test_incidence_angle.sh报错&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;解决：docker拉取ubuntu22.04或者更新libc6。
-&lt;/code&gt;&lt;/pre&gt;- https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/fwi/ - 2024, Jiahao Li.</description>
+&lt;/code&gt;&lt;/pre&gt;- http://localhost:1313/Geoscience-Lijh/workshop/fwi/ - 2024, Jiahao Li.</description>
         </item>
     
     
     
         <item>
         <title>SWIT</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/swit/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/workshop/swit/</link>
         <pubDate>Fri, 20 Dec 2024 00:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/swit/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/swit/ -&lt;h1 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h1&gt;
+        <guid>http://localhost:1313/Geoscience-Lijh/workshop/swit/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/workshop/swit/ -&lt;h1 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SWIT&lt;/strong&gt;（&lt;strong&gt;Seismic&lt;/strong&gt; &lt;strong&gt;Waveform&lt;/strong&gt; &lt;strong&gt;Inversion&lt;/strong&gt; &lt;strong&gt;Toolbox&lt;/strong&gt;）是一个用于地震波形反演（&lt;strong&gt;FWI&lt;/strong&gt;）的软件工具，使用Fortran和Python编写，由&lt;a href=&#34;https://doi.org/10.1029/2022JB025748&#34;&gt;Haipeng Li和Junlun Li&lt;/a&gt;开发。&lt;/p&gt;
 &lt;p&gt;该工具实现了两种非线性反演优化方案，即非线性共轭梯度（NLCG）方法和拟牛顿方法（L-BFGS），并配有高效的线搜索策略。软件提供了多种拟合函数，包括L-2波形（Tarantola，1984）、交叉相关（Luo&amp;amp;Schuster，1991）和归一化全局相关系数（Choi&amp;amp;Alkhalifah，2012）。用户可以通过Python脚本运行FWI项目，并使用提供的GUI进行参数设置。SWIT-1.0包括前向和伴随求解器、反演工具箱和GUI工具箱三个部分，用于地震波形反演。软件包还提供了图形用户界面（GUI），方便用户使用。&lt;/p&gt;
 &lt;p&gt;该工具的特点包括前向波场建模（FD）、伴随波场建模（FD）、梯度计算、预处理和正则化、L-BFGS和NLCG优化算法、有效步长搜索、多种不匹配函数以及多尺度反演。它使用Fortran（MPI）进行前向模拟，Python进行反演，并提供了三种使用方式：图形用户界面（GUI）、Python脚本和Jupyter Notebook。&lt;/p&gt;
@@ -187,44 +187,44 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#658b00&#34;&gt;cd&lt;/span&gt; /your/own/path/to/SWIT-1.0/examples/case-XX/
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;python SWIT_workflow.py  &lt;span style=&#34;color:#228b22&#34;&gt;# Please modify paths before running  &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-- https://geoscience-lijh.github.io/Geoscience-Lijh/workshop/swit/ - 2024, Jiahao Li.</description>
+- http://localhost:1313/Geoscience-Lijh/workshop/swit/ - 2024, Jiahao Li.</description>
         </item>
     
     
     
         <item>
         <title>Linux</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/programme/linux/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/programme/linux/</link>
         <pubDate>Tue, 10 Dec 2024 22:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/programme/linux/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/programme/linux/ -&lt;p&gt;linux system&lt;/p&gt;
+        <guid>http://localhost:1313/Geoscience-Lijh/programme/linux/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/programme/linux/ -&lt;p&gt;linux system&lt;/p&gt;
 &lt;p&gt;Ubuntu&lt;/p&gt;
 &lt;p&gt;jupyter&lt;/p&gt;
-- https://geoscience-lijh.github.io/Geoscience-Lijh/programme/linux/ - 2024, Jiahao Li.</description>
+- http://localhost:1313/Geoscience-Lijh/programme/linux/ - 2024, Jiahao Li.</description>
         </item>
     
     
     
         <item>
         <title>Summary of References</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/references/ref_summary/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/references/ref_summary/</link>
         <pubDate>Mon, 02 Dec 2024 08:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/references/ref_summary/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/references/ref_summary/ -&lt;hr&gt;
-- https://geoscience-lijh.github.io/Geoscience-Lijh/references/ref_summary/ - 2024, Jiahao Li.</description>
+        <guid>http://localhost:1313/Geoscience-Lijh/references/ref_summary/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/references/ref_summary/ -&lt;hr&gt;
+- http://localhost:1313/Geoscience-Lijh/references/ref_summary/ - 2024, Jiahao Li.</description>
         </item>
     
     
     
         <item>
         <title>Markdown Language</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/programme/markdown/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/programme/markdown/</link>
         <pubDate>Sat, 30 Nov 2024 22:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/programme/markdown/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/programme/markdown/ -&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+        <guid>http://localhost:1313/Geoscience-Lijh/programme/markdown/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/programme/markdown/ -&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by &lt;a href=&#34;https://daringfireball.net/projects/markdown/&#34;&gt;John Gruber in 2004&lt;/a&gt;, Markdown is now one of the world’s most popular markup languages.&lt;/p&gt;
 &lt;p&gt;All the content on my website is written in Markdown by &lt;a href=&#34;https://kde.github.io/ghostwriter/documentation.html&#34;&gt;ghostwtriter&lt;/a&gt;, so here&amp;rsquo;s a brief introduction to its basic usage. Of course, you can also find more details on the official website.&lt;/p&gt;
 &lt;h2 id=&#34;heading&#34;&gt;&lt;strong&gt;Heading&lt;/strong&gt;&lt;/h2&gt;
@@ -269,7 +269,7 @@ $$&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;images&#34;&gt;&lt;strong&gt;Images&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;Use !, [] and ()can embed images.&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![notebook](/images/notebook.jpg &amp;#34;an example image&amp;#34;)
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://geoscience-lijh.github.io/Geoscience-Lijh/Geoscience-Lijh/images/notebook.jpg&#34; alt=&#34;notebook&#34; title=&#34;an example image&#34;&gt;&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/Geoscience-Lijh/Geoscience-Lijh/images/notebook.jpg&#34; alt=&#34;notebook&#34; title=&#34;an example image&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Or&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![Hugo](https://gohugo.io/img/hugo-logo.png?w=200)
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://gohugo.io/img/hugo-logo.png?w=200&#34; alt=&#34;Hugo logo&#34;&gt;&lt;/p&gt;
@@ -277,19 +277,19 @@ $$&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;![Hugo logo][Hugo] for a reference defined below.
 
 [Hugo]: https://gohugo.io/img/hugo-logo.png?w=200
-&lt;/code&gt;&lt;/pre&gt;- https://geoscience-lijh.github.io/Geoscience-Lijh/programme/markdown/ - 2024, Jiahao Li.</description>
+&lt;/code&gt;&lt;/pre&gt;- http://localhost:1313/Geoscience-Lijh/programme/markdown/ - 2024, Jiahao Li.</description>
         </item>
     
     
     
         <item>
         <title>Welcome to My Blog!</title>
-        <link>https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/</link>
+        <link>http://localhost:1313/Geoscience-Lijh/introduction/test/</link>
         <pubDate>Sat, 30 Nov 2024 06:00:00 +0800</pubDate>
         
-        <guid>https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/</guid>
-        <description>My Blog https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/ -&lt;p&gt;This is a test text.&lt;/p&gt;
-- https://geoscience-lijh.github.io/Geoscience-Lijh/introduction/test/ - 2024, Jiahao Li.</description>
+        <guid>http://localhost:1313/Geoscience-Lijh/introduction/test/</guid>
+        <description>My Blog http://localhost:1313/Geoscience-Lijh/introduction/test/ -&lt;p&gt;This is a test text.&lt;/p&gt;
+- http://localhost:1313/Geoscience-Lijh/introduction/test/ - 2024, Jiahao Li.</description>
         </item>
     
     
