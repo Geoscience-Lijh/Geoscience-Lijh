@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Unfileds on My Blog</title>
-    <link>http://localhost:1313/Geoscience-Lijh/unfiled/</link>
-    <description>Recent content in Unfileds on My Blog</description>
+    <title>Phases Diagram on My Blog</title>
+    <link>http://localhost:1313/Geoscience-Lijh/tags/phases-diagram/</link>
+    <description>Recent content in Phases Diagram on My Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>2024, Jiahao Li.</copyright>
     <lastBuildDate>Tue, 10 Dec 2024 12:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Geoscience-Lijh/unfiled/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/Geoscience-Lijh/tags/phases-diagram/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Magemin</title>
       <link>http://localhost:1313/Geoscience-Lijh/unfiled/shell/</link>
